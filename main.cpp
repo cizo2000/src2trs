@@ -125,10 +125,20 @@ int main(int argc, char** argv)
     unsigned char* trs_memory = convert_trs80(bitmap, verbose);
 
     if (verbose) {
-        std::cout << std::endl << "Resuling bytes: " << std::endl;
+        std::cout << std::endl << "Resulting bytes in BASIC: " << std::endl;
+		
+		int line = 100;
         
-        for(int i = 0; i < 1024; i++) {
-            std::cout << static_cast<int>(trs_memory[i]) << ", ";
+        for(int i = 0; i < 8192; i++) {
+			if ( i % 8 == 0 ) {
+				std::cout << std::endl << line++ << " DATA ";
+			}
+			
+            std::cout << static_cast<int>(trs_memory[i]);
+			
+			if (i % 8 != 7) {
+				std::cout << ",";
+			}
         }
         
         std::cout << std::endl;
