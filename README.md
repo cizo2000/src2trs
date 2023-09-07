@@ -24,6 +24,8 @@ Args:
         -h : help
 ```
 
-Result is binary output file which contains characters for be loaded to TRS-80 screen memory
+Result is binary output file which contains 128x64 characters for be loaded to TRS-80 screen memory.
+
+**Important:** You need to choose 64x16 characters box to be shown at 1 screen.
 
 **Author: Cizo2000 <cizo2000@gmail.com>**
