@@ -1,0 +1,12 @@
+*.o
+.deps
+/*/Makefile*
+/build/
+/.kdev4
+/.cache
+*.scr
+*.kdev4
+*.txt
+*.bin
+
+!CMakeLists.txt
